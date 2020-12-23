@@ -14,6 +14,7 @@
 		ADCDE2412592709D00564B31 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCDE2402592709D00564B31 /* DailyScrum.swift */; };
 		ADCDE2452592B59100564B31 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCDE2442592B59100564B31 /* CardView.swift */; };
 		ADDABA5D2592BC0100090048 /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDABA5C2592BC0100090048 /* Color+Codable.swift */; };
+		ADDABA612592C2BC00090048 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDABA602592C2BC00090048 /* ScrumsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		ADCDE2402592709D00564B31 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		ADCDE2442592B59100564B31 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = SOURCE_ROOT; };
 		ADDABA5C2592BC0100090048 /* Color+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
+		ADDABA602592C2BC00090048 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		AD319B7025925D680060D1EE /* Scrumdinger */ = {
 			isa = PBXGroup;
 			children = (
+				ADDABA602592C2BC00090048 /* ScrumsView.swift */,
 				ADCDE2442592B59100564B31 /* CardView.swift */,
 				ADCDE23F2592707900564B31 /* Models */,
 				AD319B7125925D680060D1EE /* ScrumdingerApp.swift */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD319B7425925D680060D1EE /* MeetingView.swift in Sources */,
+				ADDABA612592C2BC00090048 /* ScrumsView.swift in Sources */,
 				ADCDE2412592709D00564B31 /* DailyScrum.swift in Sources */,
 				ADCDE2452592B59100564B31 /* CardView.swift in Sources */,
 				ADDABA5D2592BC0100090048 /* Color+Codable.swift in Sources */,

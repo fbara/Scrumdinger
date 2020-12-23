@@ -14,7 +14,6 @@ struct ScrumdingerApp: App {
             NavigationView {
                 ScrumsView(scrums: DailyScrum.data)
             }
-            
         }
     }
 }

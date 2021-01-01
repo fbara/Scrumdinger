@@ -10,6 +10,8 @@ import SwiftUI
 struct DetailView: View {
     let scrum: DailyScrum
     
+    @State private var isPresented = false
+    
     var body: some View {
         List {
             Section(header: Text("Meeting Info")) {
@@ -45,7 +47,23 @@ struct DetailView: View {
             }
         }
         .listStyle(InsetGroupedListStyle())
+        .navigationBarItems(trailing: Button("Edit") {
+            isPresented = true
+        })
         .navigationTitle(scrum.title)
+        //When isPresented changes to true, the app modally presents EditView using the entire screen.
+        .fullScreenCover(isPresented: $isPresented) {
+            NavigationView {
+                EditView()
+                    .navigationTitle(scrum.title)
+                    .navigationBarItems(leading: Button("Cancel") {
+                        isPresented = false
+                    }, trailing: Button("Done") {
+                        isPresented = false
+                    })
+            }
+            
+        }
     }
 }
 

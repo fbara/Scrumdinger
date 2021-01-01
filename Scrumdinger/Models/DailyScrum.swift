@@ -32,3 +32,19 @@ extension DailyScrum {
         ]
     }
 }
+
+//By making Data a nested type, you keep DailyScrum.Data distinct from the Data structure defined in the Foundation framework.
+extension DailyScrum {
+    //If all properties have default values, the compiler creates an initializer that takes no arguments.
+    //This initializer makes it easy to create a new instance by calling Data().
+    struct Data {
+        var title: String = ""
+        var attendees: [String] = []
+        var lengthInMinutes: Double = 5.0
+        var color: Color = .random
+    }
+    
+    var data: Data {
+        return Data(title: title, attendees: attendees, lengthInMinutes: Double(lengthInMinutes), color: color)
+    }
+}

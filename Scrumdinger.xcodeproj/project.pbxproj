@@ -16,6 +16,7 @@
 		ADDABA5D2592BC0100090048 /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDABA5C2592BC0100090048 /* Color+Codable.swift */; };
 		ADDABA612592C2BC00090048 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDABA602592C2BC00090048 /* ScrumsView.swift */; };
 		ADDABA642593EEB300090048 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDABA632593EEB300090048 /* DetailView.swift */; };
+		ADDABA67259512B300090048 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDABA66259512B300090048 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		ADDABA5C2592BC0100090048 /* Color+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
 		ADDABA602592C2BC00090048 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = SOURCE_ROOT; };
 		ADDABA632593EEB300090048 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		ADDABA66259512B300090048 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditView.swift; path = Models/EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		AD319B7025925D680060D1EE /* Scrumdinger */ = {
 			isa = PBXGroup;
 			children = (
+				ADDABA66259512B300090048 /* EditView.swift */,
 				ADDABA602592C2BC00090048 /* ScrumsView.swift */,
 				ADDABA632593EEB300090048 /* DetailView.swift */,
 				ADCDE2442592B59100564B31 /* CardView.swift */,
@@ -163,6 +166,7 @@
 			files = (
 				AD319B7425925D680060D1EE /* MeetingView.swift in Sources */,
 				ADDABA612592C2BC00090048 /* ScrumsView.swift in Sources */,
+				ADDABA67259512B300090048 /* EditView.swift in Sources */,
 				ADCDE2412592709D00564B31 /* DailyScrum.swift in Sources */,
 				ADDABA642593EEB300090048 /* DetailView.swift in Sources */,
 				ADCDE2452592B59100564B31 /* CardView.swift in Sources */,

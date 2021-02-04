@@ -12,6 +12,10 @@ struct MeetingView: View {
     @Binding var scrum: DailyScrum
     //Wrapping a property as a @StateObject means the view owns the source of truth for the object. @StateObject ties the ScrumTimer ObservableObject to the MeetingView life cycle.
     @StateObject var scrumTimer = ScrumTimer()
+    @State private var transcript = ""
+    @State private var isRecording = false
+    
+    private let speechRecognizer = SpeechRecognizer()
     
     var player: AVPlayer { AVPlayer.sharedDingPlayer }
     
@@ -21,7 +25,7 @@ struct MeetingView: View {
                 .fill(scrum.color)
             VStack {
                 MeetingHeaderView(secondsElapsed: $scrumTimer.secondsElapsed, secondsRemaining: $scrumTimer.secondsRemaining, scrumColor: scrum.color)
-                MeetingTimerView(speakers: scrumTimer.speakers, scrumColor: scrum.color)
+                MeetingTimerView(speakers: scrumTimer.speakers, scrumColor: scrum.color, isRecording: isRecording)
                 MeetingFooterView(speakers: $scrumTimer.speakers, skipAction: scrumTimer.skipSpeaker)
             }
         }
@@ -33,11 +37,16 @@ struct MeetingView: View {
                 player.seek(to: .zero)
                 player.play()
             }
+            
+            speechRecognizer.record(to: $transcript)
+            isRecording = true
             scrumTimer.startScrum()
         }
         .onDisappear {
             scrumTimer.stopScrum()
-            let newHistory = History(attendees: scrum.attendees, lengthInMinutes: scrumTimer.secondsElapsed / 60)
+            speechRecognizer.stopRecording()
+            
+            let newHistory = History(attendees: scrum.attendees, lengthInMinutes: scrumTimer.secondsElapsed / 60, transcript: transcript)
             scrum.history.insert(newHistory, at: 0)
         }
     }
